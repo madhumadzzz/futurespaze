@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.65">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Sign Up / Sign In&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="flex justify-center items-center h-screen bg-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="w-96 p-6 bg-white shadow-lg rounded-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 id="formTitle" class="text-2xl font-semibold mb-4 text-center"&gt;Sign Up&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input id="email" type="email" placeholder="Email" class="w-full p-2 border rounded mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input id="password" type="password" placeholder="Password" class="w-full p-2 border rounded mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="handleSubmit()" class="w-full bg-blue-600 text-white py-2 rounded"&gt;Sign Up&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p id="toggleForm" class="text-center mt-4 text-sm cursor-pointer text-blue-600" onclick="toggleAuth()"&gt;Already have an account? Sign In&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let isSignUp = true;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function toggleAuth() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>isSignUp = !isSignUp;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('formTitle').innerText = isSignUp ? "Sign Up" : "Sign In";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('toggleForm').innerText = isSignUp ? "Already have an account? Sign In" : "Don't have an account? Sign Up";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function handleSubmit() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const email = document.getElementById('email').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const password = document.getElementById('password').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const action = isSignUp ? "Signing Up" : "Signing In";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert(`${action} with Email: ${email}`);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
